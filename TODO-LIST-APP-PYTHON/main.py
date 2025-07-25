@@ -8,14 +8,16 @@ while True:
         print("\n")
     except ValueError:
         request_input = -1
-        
+
     if request_input == 1:
         for i in range(1024):
             if todo[i] != "":
                 print(todo[i])
     elif request_input == 2:
         index = int(input("Please Select Where To Put: "))
-        todo[index] = input("Input Message: ")
+        index_number_message = str(index) + "-) "
+        message = input("Input Message: ")
+        todo[index] = index_number_message+ message
     elif request_input == 3:
         index = int(input("Select Where To Delete: "))
         todo[index] = ""
